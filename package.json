@@ -1,0 +1,21 @@
+{
+  "name": "yatzee-typescript",
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/node": "*"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register/traspile-only 'test/**/*.ts'",
+    "watch": "mocha --require ts-node/register --watch --watch-files src, test/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true
+}
