@@ -36,6 +36,18 @@ export default class Yatzee {
         return args.filter((num) => num == 3).reduce((acc, val) => acc + val, 0);
     }
 
+    fours(): number {
+        return this.dice.filter((num) => num == 4).reduce((acc, val) => acc + val, 0);
+    }
+
+    fives(): number {
+        return this.dice.filter((num) => num == 5).reduce((acc, val) => acc + val, 0);
+    }
+
+    sixes(): number {
+        return this.dice.filter((num) => num == 6).reduce((acc, val) => acc + val, 0);
+    }
+
     static score_pair(d1: number, d2: number, d3: number, d4: number, d5: number): number {
         let counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         counts[d1 - 1]++;
@@ -144,15 +156,4 @@ export default class Yatzee {
         else return 0;
     }
 
-    fours(): number {
-        return this.dice.filter((num) => num == 4).reduce((acc, val) => acc + val, 0);
-    }
-
-    fives(): number {
-        return this.dice.filter((num) => num == 5).reduce((acc, val) => acc + val, 0);
-    }
-
-    sixes(): number {
-        return this.dice.filter((num) => num == 6).reduce((acc, val) => acc + val, 0);
-    }
 }
