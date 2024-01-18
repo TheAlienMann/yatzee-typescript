@@ -164,8 +164,9 @@ export default class Yatzee {
     }
 
     sixes(): number {
-        let sum = 0;
-        for (var at = 0; at < this.dice.length; at++) if (this.dice[at] == 6) sum = sum + 6;
-        return sum;
+        return this.dice.filter((num) => num == 6).reduce((acc, val) => acc + val, 0);
+        // let sum = 0;
+        // for (var at = 0; at < this.dice.length; at++) if (this.dice[at] == 6) sum = sum + 6;
+        // return sum;
     }
 }
