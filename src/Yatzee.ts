@@ -157,10 +157,7 @@ export default class Yatzee {
     }
 
     fives(): number {
-        let s = 0;
-        var i;
-        for (i = 0; i < this.dice.length; i++) if (this.dice[i] == 5) s = s + 5;
-        return s;
+        return this.dice.filter((num) => num == 5).reduce((acc, val) => acc + val, 0);
     }
 
     sixes(): number {
