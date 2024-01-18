@@ -32,15 +32,8 @@ export default class Yatzee {
         return args.filter((num) => num == 2).reduce((acc, val) => acc + val, 0);
     }
 
-    static threes(d1: number, d2: number, d3: number, d4: number, d5: number): number {
-        var s;
-        s = 0;
-        if (d1 == 3) s += 3;
-        if (d2 == 3) s += 3;
-        if (d3 == 3) s += 3;
-        if (d4 == 3) s += 3;
-        if (d5 == 3) s += 3;
-        return s;
+    static threes(...args: number[]): number {
+        return args.filter((num) => num == 3).reduce((acc, val) => acc + val, 0);
     }
 
     static score_pair(d1: number, d2: number, d3: number, d4: number, d5: number): number {
