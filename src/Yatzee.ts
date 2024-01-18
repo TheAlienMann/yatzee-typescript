@@ -146,14 +146,7 @@ export default class Yatzee {
     }
 
     fours(): number {
-        var sum;
-        sum = 0;
-        for (let at = 0; at != 5; at++) {
-            if (this.dice[at] == 4) {
-                sum += 4;
-            }
-        }
-        return sum;
+        return this.dice.filter((num) => num == 4).reduce((acc, val) => acc + val, 0);
     }
 
     fives(): number {
