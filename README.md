@@ -1,0 +1,1 @@
+## Yatzee Kata in TypeScript.
