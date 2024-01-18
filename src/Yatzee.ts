@@ -1,5 +1,5 @@
 export default class Yatzee {
-    private dice: number[];
+    private readonly dice: number[];
 
     constructor(d1: number, d2: number, d3: number, d4: number, _5: number) {
         this.dice = [];
