@@ -15,7 +15,7 @@ export default class Yatzee {
     }
 
     static yatzy(...args: number[]): number {
-        var counts = [0, 0, 0, 0, 0, 0, 0, 0];
+        let counts = [0, 0, 0, 0, 0, 0, 0, 0];
         for (var i = 0; i != args.length; ++i) {
             var die = args[i];
             counts[die - 1]++;
