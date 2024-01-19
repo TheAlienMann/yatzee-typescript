@@ -59,13 +59,13 @@ export default class Yatzee {
         return 0;
     }
 
-    static two_pair(d1: number, d2: number, d3: number, d4: number, d5: number): number {
+    static two_pair(...args: number[]): number {
         let counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-        counts[d1 - 1]++;
-        counts[d2 - 1]++;
-        counts[d3 - 1]++;
-        counts[d4 - 1]++;
-        counts[d5 - 1]++;
+        counts[args[1 -1] - 1]++;
+        counts[args[2 -1] - 1]++;
+        counts[args[3 -1] - 1]++;
+        counts[args[4 -1] - 1]++;
+        counts[args[5 -1] - 1]++;
         let n = 0;
         let score = 0;
         for (let i = 0; i < 6; i += 1)
