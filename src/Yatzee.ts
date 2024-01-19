@@ -127,7 +127,7 @@ export default class Yatzee {
         let _3 = false;
         let _3_at = 0;
 
-        let tallies = [0, 0, 0, 0, 0, 0, 0, 0];
+        let tallies = [0, 0, 0, 0, 0, 0];
         tallies[args[1 - 1] - 1] += 1;
         tallies[args[2 - 1] - 1] += 1;
         tallies[args[3 - 1] - 1] += 1;
