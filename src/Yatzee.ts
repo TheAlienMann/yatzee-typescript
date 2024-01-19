@@ -123,7 +123,6 @@ export default class Yatzee {
 
     static fullHouse(d1: number, d2: number, d3: number, d4: number, d5: number): number {
         let _2 = false;
-        let i;
         let _2_at = 0;
         let _3 = false;
         let _3_at = 0;
@@ -135,13 +134,13 @@ export default class Yatzee {
         tallies[d4 - 1] += 1;
         tallies[d5 - 1] += 1;
 
-        for (i = 0; i != 6; i += 1)
+        for (let i = 0; i != 6; i += 1)
             if (tallies[i] == 2) {
                 _2 = true;
                 _2_at = i + 1;
             }
 
-        for (i = 0; i != 6; i += 1)
+        for (let i = 0; i != 6; i += 1)
             if (tallies[i] == 3) {
                 _3 = true;
                 _3_at = i + 1;
