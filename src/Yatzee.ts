@@ -89,8 +89,7 @@ export default class Yatzee {
     }
 
     static three_of_a_kind(d1: number, d2: number, d3: number, d4: number, d5: number): number {
-        var t;
-        t = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let t = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         t[d1 - 1]++;
         t[d2 - 1]++;
         t[d3 - 1]++;
