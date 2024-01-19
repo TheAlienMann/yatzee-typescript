@@ -121,18 +121,18 @@ export default class Yatzee {
         return 0;
     }
 
-    static fullHouse(d1: number, d2: number, d3: number, d4: number, d5: number): number {
+    static fullHouse(...args: number[]): number {
         let _2 = false;
         let _2_at = 0;
         let _3 = false;
         let _3_at = 0;
 
         let tallies = [0, 0, 0, 0, 0, 0, 0, 0];
-        tallies[d1 - 1] += 1;
-        tallies[d2 - 1] += 1;
-        tallies[d3 - 1] += 1;
-        tallies[d4 - 1] += 1;
-        tallies[d5 - 1] += 1;
+        tallies[args[1 - 1] - 1] += 1;
+        tallies[args[2 - 1] - 1] += 1;
+        tallies[args[3 - 1] - 1] += 1;
+        tallies[args[4 - 1] - 1] += 1;
+        tallies[args[5 - 1] - 1] += 1;
 
         for (let i = 0; i != 6; i += 1)
             if (tallies[i] == 2) {
