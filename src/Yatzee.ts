@@ -89,7 +89,7 @@ export default class Yatzee {
     }
 
     static three_of_a_kind(...args: number[]): number {
-        let t = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let t = [0, 0, 0, 0, 0, 0, 0];
         t[args[1 - 1] - 1]++;
         t[args[2 - 1] - 1]++;
         t[args[3 - 1] - 1]++;
