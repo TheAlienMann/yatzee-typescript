@@ -60,7 +60,7 @@ export default class Yatzee {
     }
 
     static two_pair(...args: number[]): number {
-        let counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let counts = [0, 0, 0, 0, 0, 0, 0, 0];
         counts[args[1 -1] - 1]++;
         counts[args[2 -1] - 1]++;
         counts[args[3 -1] - 1]++;
