@@ -111,8 +111,7 @@ export default class Yatzee {
     }
 
     static largeStraight(d1: number, d2: number, d3: number, d4: number, d5: number): number {
-        var tallies;
-        tallies = [0, 0, 0, 0, 0, 0, 0, 0];
+        let tallies = [0, 0, 0, 0, 0, 0, 0, 0];
         tallies[d1 - 1] += 1;
         tallies[d2 - 1] += 1;
         tallies[d3 - 1] += 1;
