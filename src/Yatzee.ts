@@ -77,13 +77,13 @@ export default class Yatzee {
         else return 0;
     }
 
-    static four_of_a_kind(_1: number, _2: number, d3: number, d4: number, d5: number): number {
+    static four_of_a_kind(...args: number[]): number {
         let tallies = [0, 0, 0, 0, 0, 0, 0, 0];
-        tallies[_1 - 1]++;
-        tallies[_2 - 1]++;
-        tallies[d3 - 1]++;
-        tallies[d4 - 1]++;
-        tallies[d5 - 1]++;
+        tallies[args[1 - 1] - 1]++;
+        tallies[args[2 - 1] - 1]++;
+        tallies[args[3 - 1] - 1]++;
+        tallies[args[4 - 1] - 1]++;
+        tallies[args[5 - 1] - 1]++;
         for (let i = 0; i < 6; i++) if (tallies[i] >= 4) return (i + 1) * 4;
         return 0;
     }
