@@ -50,11 +50,11 @@ export default class Yatzee {
 
     static score_pair(...args: number[]): number {
         let counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-        counts[args[1-1] - 1]++;
-        counts[args[2-1] - 1]++;
-        counts[args[3-1] - 1]++;
-        counts[args[4-1] - 1]++;
-        counts[args[5-1] - 1]++;
+        counts[args[0] - 1]++;
+        counts[args[1] - 1]++;
+        counts[args[2] - 1]++;
+        counts[args[3] - 1]++;
+        counts[args[4] - 1]++;
         for (let at = 0; at != 6; at++) if (counts[6 - at - 1] >= 2) return (6 - at) * 2;
         return 0;
     }
