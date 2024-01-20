@@ -90,11 +90,11 @@ export default class Yatzee {
 
     static three_of_a_kind(...args: number[]): number {
         let t = [0, 0, 0, 0, 0];
-        t[args[1 - 1] - 1]++;
-        t[args[2 - 1] - 1]++;
-        t[args[3 - 1] - 1]++;
-        t[args[4 - 1] - 1]++;
-        t[args[5 - 1] - 1]++;
+        t[args[0] - 1]++;
+        t[args[1] - 1]++;
+        t[args[2] - 1]++;
+        t[args[3] - 1]++;
+        t[args[4] - 1]++;
         for (let i = 0; i < 5; i++) if (t[i] >= 3) return (i + 1) * 3;
         return 0;
     }
