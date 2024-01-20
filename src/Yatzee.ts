@@ -61,11 +61,11 @@ export default class Yatzee {
 
     static two_pair(...args: number[]): number {
         let counts = [0, 0, 0, 0, 0];
-        counts[args[1 -1] - 1]++;
-        counts[args[2 -1] - 1]++;
-        counts[args[3 -1] - 1]++;
-        counts[args[4 -1] - 1]++;
-        counts[args[5 -1] - 1]++;
+        counts[args[1 - 1] - 1]++;
+        counts[args[2 - 1] - 1]++;
+        counts[args[3 - 1] - 1]++;
+        counts[args[4 - 1] - 1]++;
+        counts[args[5 - 1] - 1]++;
         let n = 0;
         let score = 0;
         for (let i = 0; i < 5; i += 1)
