@@ -121,14 +121,7 @@ export default class Yatzee {
     }
 
     static fullHouse(...args: number[]): number {
-        const numberOfOccurences = {};
-        for (let item = 0; item < args.length; item++) {
-            if (isNaN(numberOfOccurences[args[item].toString()])) {
-                numberOfOccurences[args[item].toString()] = 1;
-            } else {
-                numberOfOccurences[args[item].toString()] += 1;
-            }
-        }
+        const numberOfOccurences = this.occurencesIn(args);
         let sum = 0;
         if (Object.keys(numberOfOccurences).length != 2) {
             return 0;
@@ -138,5 +131,17 @@ export default class Yatzee {
             }
             return sum;
         }
+    }
+
+    private static occurencesIn(args: number[]) {
+        const numberOfOccurences = {};
+        for (let item = 0; item < args.length; item++) {
+            if (isNaN(numberOfOccurences[args[item].toString()])) {
+                numberOfOccurences[args[item].toString()] = 1;
+            } else {
+                numberOfOccurences[args[item].toString()] += 1;
+            }
+        }
+        return numberOfOccurences;
     }
 }
