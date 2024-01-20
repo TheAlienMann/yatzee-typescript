@@ -112,11 +112,11 @@ export default class Yatzee {
 
     static largeStraight(...args: number[]): number {
         let tallies = [0, 0, 0, 0, 0, 0];
-        tallies[args[1 - 1] - 1] += 1;
-        tallies[args[2 - 1] - 1] += 1;
-        tallies[args[3 - 1] - 1] += 1;
-        tallies[args[4 - 1] - 1] += 1;
-        tallies[args[5 - 1] - 1] += 1;
+        tallies[args[0] - 1] += 1;
+        tallies[args[1] - 1] += 1;
+        tallies[args[2] - 1] += 1;
+        tallies[args[3] - 1] += 1;
+        tallies[args[4] - 1] += 1;
         if (tallies[1] == 1 && tallies[2] == 1 && tallies[3] == 1 && tallies[4] == 1 && tallies[5] == 1) return 20;
         return 0;
     }
