@@ -127,10 +127,10 @@ export default class Yatzee {
     }
 
     private static sumOfDifferentOccur(numberOfOccurences: {}, countsOfOccurences: number) {
-        if (Object.keys(numberOfOccurences)[countsOfOccurences.toString()] < countsOfOccurences) {
+        if (+Object.keys(numberOfOccurences)[countsOfOccurences.toString()] < countsOfOccurences) {
             return 0;
         } else {
-            return Object.keys(numberOfOccurences)[countsOfOccurences.toString()] * countsOfOccurences;
+            return +Object.keys(numberOfOccurences)[countsOfOccurences.toString()] * countsOfOccurences;
         }
     }
 
