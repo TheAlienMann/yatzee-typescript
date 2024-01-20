@@ -130,7 +130,7 @@ export default class Yatzee {
         if (Object.keys(numberOfOccurences).length <= countsOfOccurences) {
             for (let [key, value] of Object.entries(numberOfOccurences)) {
                 if (+value >= countsOfOccurences) {
-                    return +value * countsOfOccurences;
+                    return +key * countsOfOccurences;
                 }
             }
         } else {
