@@ -108,8 +108,6 @@ export default class Yatzee {
         tallies[args[5 - 1] - 1] += 1;
         const everySingleItemIsOne = (value) => value == 1;
         return tallies.every(everySingleItemIsOne) ? 15 : 0;
-        // if (tallies[0] == 1 && tallies[1] == 1 && tallies[2] == 1 && tallies[3] == 1 && tallies[4] == 1) return 15;
-        // return 0;
     }
 
     static largeStraight(...args: number[]): number {
