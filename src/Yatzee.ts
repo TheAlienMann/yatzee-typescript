@@ -121,32 +121,23 @@ export default class Yatzee {
     }
 
     static fullHouse(...args: number[]): number {
-        let _2 = false;
-        let _2_at = 0;
-        let _3 = false;
-        let _3_at = 0;
-
-        let tallies = [0, 0, 0, 0, 0, 0];
-        tallies[args[0] - 1] += 1;
-        tallies[args[1] - 1] += 1;
-        tallies[args[2] - 1] += 1;
-        tallies[args[3] - 1] += 1;
-        tallies[args[4] - 1] += 1;
-
-        for (let i = 0; i != 6; i += 1)
-            if (tallies[i] == 2) {
-                _2 = true;
-                _2_at = i + 1;
+        const numberOfOccurences = {};
+        for (let item = 0; item < args.length; item++) {
+            if (isNaN(numberOfOccurences[args[item].toString()])) {
+                numberOfOccurences[args[item].toString()] = 1;
+            } else {
+                numberOfOccurences[args[item].toString()] += 1;
             }
-
-        for (let i = 0; i != 6; i += 1)
-            if (tallies[i] == 3) {
-                _3 = true;
-                _3_at = i + 1;
+        }
+        console.log(numberOfOccurences)
+        let sum = 0;
+        if (Object.keys(numberOfOccurences).length != 2) {
+            return 0;
+        } else {
+            for (let [key, value] of Object.entries(numberOfOccurences)) {
+                sum += +key * +value;
             }
-
-        if (_2 && _3) return _2_at * 2 + _3_at * 3;
-        else return 0;
+            return sum;
+        }
     }
-
 }
