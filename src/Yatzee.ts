@@ -126,9 +126,9 @@ export default class Yatzee {
         return this.sumOf(numberOfOccurences);
     }
 
-    private static sumOf(numberOfOccurences: {}) {
+    private static sumOf(numberOfOccurences: {}, countsOfOccurences: number = 2) {
         let sum = 0;
-        if (Object.keys(numberOfOccurences).length != 2) {
+        if (Object.keys(numberOfOccurences).length != countsOfOccurences) {
             return 0;
         } else {
             for (let [key, value] of Object.entries(numberOfOccurences)) {
