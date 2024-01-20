@@ -118,8 +118,6 @@ export default class Yatzee {
         tallies[args[3] - 2] += 1;
         tallies[args[4] - 2] += 1;
         return tallies.every((elem) => elem == 1) ? 20 : 0;
-        // if (tallies[1] == 1 && tallies[1] == 1 && tallies[2] == 1 && tallies[3] == 1 && tallies[4] == 1) return 20;
-        // return 0;
     }
 
     static fullHouse(...args: number[]): number {
