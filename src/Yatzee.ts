@@ -111,6 +111,7 @@ export default class Yatzee {
     }
 
     static largeStraight(...args: number[]): number {
+
         let tallies = [0, 0, 0, 0, 0];
         tallies[args[0] - 2] += 1;
         tallies[args[1] - 2] += 1;
@@ -122,6 +123,10 @@ export default class Yatzee {
 
     static fullHouse(...args: number[]): number {
         const numberOfOccurences = this.occurencesIn(args);
+        return this.sumOf(numberOfOccurences);
+    }
+
+    private static sumOf(numberOfOccurences: {}) {
         let sum = 0;
         if (Object.keys(numberOfOccurences).length != 2) {
             return 0;
