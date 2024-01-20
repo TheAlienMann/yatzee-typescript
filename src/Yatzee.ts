@@ -95,7 +95,7 @@ export default class Yatzee {
         t[args[3 - 1] - 1]++;
         t[args[4 - 1] - 1]++;
         t[args[5 - 1] - 1]++;
-        for (let i = 0; i < 6; i++) if (t[i] >= 3) return (i + 1) * 3;
+        for (let i = 0; i < 5; i++) if (t[i] >= 3) return (i + 1) * 3;
         return 0;
     }
 
