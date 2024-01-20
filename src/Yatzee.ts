@@ -60,6 +60,7 @@ export default class Yatzee {
     }
 
     static two_pair(...args: number[]): number {
+        const numberOfOccurences = this.occurencesIn(args);
         let counts = [0, 0, 0, 0, 0];
         counts[args[1 - 1] - 1]++;
         counts[args[2 - 1] - 1]++;
