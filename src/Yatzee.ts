@@ -129,7 +129,6 @@ export default class Yatzee {
                 numberOfOccurences[args[item].toString()] += 1;
             }
         }
-        console.log(numberOfOccurences)
         let sum = 0;
         if (Object.keys(numberOfOccurences).length != 2) {
             return 0;
