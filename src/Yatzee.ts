@@ -39,7 +39,7 @@ export default class Yatzee {
 
     static score_pair(...args: number[]): number {
         if (new Set(args).size == 1) return 0;
-        let counts = [0, 0, 0, 0, 0, 0, 0, 0];
+        let counts = [0, 0, 0, 0, 0, 0];
         counts[args[0] - 1]++;
         counts[args[1] - 1]++;
         counts[args[2] - 1]++;
