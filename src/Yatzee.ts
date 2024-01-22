@@ -1,13 +1,14 @@
 export default class Yatzee {
     private readonly dice: number[];
 
-    constructor(d1: number, d2: number, d3: number, d4: number, _5: number) {
-        this.dice = [];
-        this.dice[0] = d1;
-        this.dice[1] = d2;
-        this.dice[2] = d3;
-        this.dice[3] = d4;
-        this.dice[4] = _5;
+    constructor(...args: number[]) {
+        this.dice = args
+        // this.dice = [];
+        // this.dice[0] = d1;
+        // this.dice[1] = d2;
+        // this.dice[2] = d3;
+        // this.dice[3] = d4;
+        // this.dice[4] = _5;
     }
 
     static chance(...args: number[]): number {
