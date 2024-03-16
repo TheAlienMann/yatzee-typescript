@@ -6,6 +6,7 @@ export default class Yatzee {
     }
 
     static chance(...args: number[]): number {
+        // adding a silly comment, just to test that i can commit and push.
         return args.reduce((acc, val) => acc + val, 0);
     }
 
